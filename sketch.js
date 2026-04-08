@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { EXRLoader } from "three/addons/loaders/EXRLoader.js";
+import { RGBELoader } from "three/addons/loaders/RGBELoader.js";
 
 // DOM refs
 const startOverlay = document.getElementById("startOverlay");
@@ -12,18 +12,18 @@ const videoEl = document.getElementById("myVideo");
 const scene = new THREE.Scene();
 
 // HDRI
-const exrLoader = new EXRLoader();
-exrLoader.load(
-  "bg.exr",
+const rgbeLoader = new RGBELoader();
+rgbeLoader.load(
+  "bg.hdr",
   (texture) => {
     texture.mapping = THREE.EquirectangularReflectionMapping;
     scene.background = texture;
     scene.environment = texture;
-    console.log("EXR loaded");
+    console.log("HDR loaded");
   },
   undefined,
   (err) => {
-    console.error("bg.exr failed to load", err);
+    console.error("bg.hdr failed to load", err);
   }
 );
 
