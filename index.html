@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.183.2/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.183.2/examples/jsm/"
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <!--   This is our video which we are using as a texture   -->
+    <video
+      id="myVideo"
+      autoplay
+      muted
+      loop
+      style="width: 0px; height: 0px;"
+      crossorigin="anonymous"
+    >
+      <source src="ocean.mp4" type="video/mp4" />
+    </video>
+    <div id="startOverlay">
+  <div id="startCard">
+    <h1>Memory as Space</h1>
+    <p class="subtitle">Surreal tooth loss exhibition</p>
+
+    <div class="instructions">
+      <p><strong>Move:</strong> W A S D</p>
+      <p><strong>Look around:</strong> drag with mouse</p>
+      <p><strong>Zoom:</strong> mouse wheel / trackpad</p>
+      <p><strong>Adjust height:</strong> ↑ ↓</p>
+    </div>
+
+    <button id="enterButton">Enter</button>
+  </div>
+</div>
+    <script src="sketch.js" type="module"></script>
+  </body>
+</html>

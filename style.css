@@ -1,0 +1,64 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+#startOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 18, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+#startCard {
+  width: min(420px, 86vw);
+  padding: 28px 30px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #111;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+#startCard h1 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#startCard .subtitle {
+  margin: 0 0 18px 0;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+#startCard .instructions {
+  text-align: left;
+  margin: 0 auto 22px auto;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+#startCard .instructions p {
+  margin: 4px 0;
+}
+
+#enterButton {
+  border: none;
+  background: #8b1018;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#enterButton:hover {
+  opacity: 0.92;
+}
